@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+	<TemplateFileName>HandlerTemplated.as</TemplateFileName>
+
+	<GCMessageReg reg="True">(\w+)GCMessage\.as</GCMessageReg>
+	<FunctionReg reg="True">\s*public function (\w+)\(data:IDataInput\):void\s*</FunctionReg>
+
+	<DocCommentBeginReg reg="True">\s*\*/\s*</DocCommentBeginReg>
+	<DocCommentEndReg reg="True">\s*/\*\*\s*</DocCommentEndReg>
+
+	<FunctionBeginReg reg="True">.*\{.*</FunctionBeginReg>
+	<FunctionEndReg reg="True">.*\}.*</FunctionEndReg>
+
+	<VariableReg reg="True">\s*var (\w+):(\w+)\s*</VariableReg>
+	<HandlerFunctionReg reg="True">\s*\w+Handler\.\w+\((.*)\);\s*</HandlerFunctionReg>
+
+	<ApplicationCMDName>ApplicationCMD.%s</ApplicationCMDName>
+	<NResponderApplicationCMD>//NResponder.dispatch(%s, [%s]);</NResponderApplicationCMD>
+	<NResponderApplicationCMDNoParam>//NResponder.dispatch(%s);</NResponderApplicationCMDNoParam>
+
+	<HandlerFileFunctionFormat>\t\tpublic static function %s(%s):void\n\t\t{\n\t\t\t%s\n\t\t}\n</HandlerFileFunctionFormat>
+
+	<ApplicationCMDStatement>\t\tpublic static const %s:String=BASE + '%s';\n</ApplicationCMDStatement>
+
+	<HandlerFileName>%sHandler</HandlerFileName>
+	<HandlerFileClassNameFlag>$Classname$</HandlerFileClassNameFlag>
+	<HandlerFileContentFlag>$Content$</HandlerFileContentFlag>
+
+	<ApplicationCMDArea>\n\t\t//maybe useful\n\t\t/*\n%s\t\t*/</ApplicationCMDArea>
+</config>
