@@ -61,7 +61,7 @@ class FunctionData(object):
         return text
 
     def getApplicationCMDArea(self):
-        return FunctionData.ApplicationCMDStatement % (self.applicationCMDName, self.applicationCMDName)
+        return FunctionData.ApplicationCMDStatement % (self.functionName, self.functionName)
 
     def __str__(self):
     	return '%s, %s, (%s)' % (self.functionName, self.docComment, ', '.join([str(x) for x in self.handlerParamList]))

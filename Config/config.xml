@@ -20,7 +20,7 @@
 
 	<HandlerFileFunctionFormat>\t\tpublic static function %s(%s):void\n\t\t{\n\t\t\t%s\n\t\t}\n</HandlerFileFunctionFormat>
 
-	<ApplicationCMDStatement>\t\tpublic static const %s:String=BASE + '%s';\n</ApplicationCMDStatement>
+	<ApplicationCMDStatement>\t\tpublic static const %s:String = BASE + '%s';\n</ApplicationCMDStatement>
 
 	<HandlerFileName>%sHandler</HandlerFileName>
 	<HandlerFileClassNameFlag>$Classname$</HandlerFileClassNameFlag>
